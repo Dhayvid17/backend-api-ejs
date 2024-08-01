@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Create Page | <%= title %>
+    </title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="/">Home page</a></li>
+                <li><a href="/about">About page</a></li>
+                <li><a href="/blogs/create">Add New Blog</a></li>
+            </ul>
+        </nav>
+
+        <div class="create-new-blog">
+            <h3>Create a new blog here</h3>
+
+            <form action="/blogs/create" method="POST">
+                <div>
+                    <label for="title">Blog Title:</label>
+                    <input type="text" name="title" id="title" placeholder="Enter your blog title..." required>
+                </div>
+                <div>
+                    <label for="snippet">Blog Snippet:</label>
+                    <input type="text" name="snippet" id="snippet" placeholder="Enter your blog snippet..." required>
+                </div>
+                <div>
+                    <label for="body">Blog Body:</label>
+                    <textarea name="body" id="body" cols="30" rows="10" placeholder="Enter your blog details..."
+                        required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
